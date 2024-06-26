@@ -1,0 +1,502 @@
+.menucha {
+    padding: 10px;
+    background-color: green;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body {  
+    margin:0 auto;
+    padding: 0;
+    background-color: #e6e6e6;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menuchainput {
+    display: flex;
+    justify-content: center;
+}
+.menucha input{
+    min-width: 350px;
+    padding: 9px 9px 9px 9px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-color: #ffffff;
+}
+.menucha button{
+    width: 1.8cm;
+    height: auto;
+}
+.menuchathanhphan{
+    width: 380px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menuchathanhphan a{
+    text-decoration: none;  
+}
+.menutong{
+    min-width: 106px;
+}
+.menucon{
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    height: 38px;
+    margin: 0;
+    top:100%
+    
+    
+}
+.menucon ul{
+
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;  
+    color: #ffffff;
+}
+.menucon li{
+    list-style: none;
+}
+.thanhtacvu{
+    margin:5px 0;
+    width: 1130px;
+    height: auto;
+    padding: 10px;  
+    
+}
+.thanhtacvu a{
+    text-decoration: none;
+    display: inline-block;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #000000;
+}
+.body1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.tongquansanpham{
+    height: 86px;
+    width: 1130px;
+    background-color:#ffffff;
+}
+.tieudesanpham{
+    padding: 15px;
+}
+.tieudesanpham span{
+    margin-right: 15px;
+}
+.thongtinsanpham{
+    
+    width: 1130px;
+    height: 1050px;
+    background-color:#ffffff;
+    display: flex;
+}    
+.anhsanpham{
+    padding: 0 15px;
+    width: 35%;
+    height: 100%;
+
+}
+.anhsanpham img{
+width: 100%;
+height: 40%;
+}
+#giacu {
+    text-decoration: line-through;
+}
+.thongtin{
+    
+    width: 45%;
+    height: 100%;
+    padding: 0 15px;
+    border-right: 0.5px solid #f3ecec;
+}
+.thongtin li{
+    list-style: none;
+}
+.camket{
+    width: 20%;
+    height: 100%;
+    padding: 0 5px;
+}
+.thongso li{
+    margin-bottom: 1rem;
+}
+.thongso span{
+    padding-left: 10px;
+}
+a{
+    text-decoration: none;
+    font-size: 80%;
+    color: aquamarine;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.box {
+   display: block;
+}
+.dulieu{
+    display: inline-block;
+    width: 500px;
+   
+    
+    
+}
+.dulieu .box1{
+    width: 230px;
+    height: 112px;
+    background-color: #ccffe2;
+    border: 1px solid #169c2c;
+    border-radius: 4px;
+}
+.box1{
+    display: flex;
+    justify-content: center;
+    
+}
+.box1 .boxtt{
+    display: block;
+    font-size: 12px;
+    margin: 9px 18px;
+
+}
+.boxtt .cauhinh{
+    font-weight: 400;
+}
+.boxtt .gia{
+    display: block;
+    padding-top: 5px;
+    padding-right: 100px;
+    color: red;
+    font-weight: 700;
+}
+.boxtt .giacu{
+    display: block;
+    padding-top: 5px;
+    padding-right: 100px;
+    text-decoration: line-through;
+    color: #999;
+    
+}
+.boxtt img{
+    position: absolute;
+    padding-left: 160px;
+   
+    
+}
+.box2{
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+.box2 .boxtt{
+    float: left;
+    display: block;
+    font-size: 12px;
+    margin: 9px 18px;
+    
+
+}
+.dulieu .box2{
+    width: 230px;
+    height: 112px;
+    background-color: #8e918f4b;
+    border: 1px solid #169c2c;
+    border-radius: 4px;
+}
+/* gif */
+
+.gif{
+    width: 450px;
+    height: 190px;
+    border: 1px solid #169c2c;
+    border-radius: 10px;
+    padding: 20px 25px;
+    margin-top: 15px;
+}
+.gif .t{
+    width: 80px;
+    height: 25px;
+    background: #169c2c;
+    border-radius: 4px;
+}
+.gif .t h4{
+    text-align: center;
+    color: #e6e6e6;
+}
+.gif .text{
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #000;
+    padding-left: 10px;
+    position: relative;
+}
+.buy{
+    width: 450px;
+    height: 50px;
+    background-color: rgb(237, 193, 54);
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.buy a{
+    color: #fff;   
+}
+.add{
+    width: 450px;
+    height: 50px;
+    background-color: #e10000;
+    margin-top: 10px;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+.add a{
+    color: #fff;   
+}
+.sp{
+    display: flex;
+    margin-top: 10px;
+    
+}
+.sp .trai{
+    width: 220px;
+    height: 57px;
+    text-align: center;
+    background: #006acb;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+.sp .phai{
+    margin-left: 10px;
+    width: 220px;
+    height: 57px;
+    text-align: center;
+    background: #006acb;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+
+/* hover */
+
+.buy:hover{
+    background: rgb(255, 235, 171);
+}
+.add:hover{
+    background: #ed9393;
+}
+.sp .trai:hover{
+    background: #8ac4fa;
+}
+.sp .phai:hover{
+    background: #8ac4fa;
+}
+
+/* Phần cam kết */
+
+.camket1 h4{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+}
+.dk li{
+    font-family: SFProText;
+    list-style: none;
+    line-height: 2;
+    font-size: 14;
+    padding: 2px;
+}
+.hotro{
+    background: #169c2c;
+    text-align: center;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin: -1px;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 50px;
+}
+.tthotro{
+    padding: 16px 4px;
+    height: 130px;
+   
+ 
+    
+}
+.tt1{
+    height: 90px;
+    display: flex;
+    margin-top: 16px;
+   
+}
+.tt1 .avatar{
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+}
+.avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.thongtin1{
+    flex: 1;
+    margin-left: 10px;
+    margin-top: -5px;
+}
+.thongtin1 a{
+    font-size: 15px;
+    color: red;
+}
+/* .mxh a{
+    padding: 9px;
+    min-width: 70px;
+  margin-top: 20px;
+   
+    
+
+} */
+.mxh{
+    display: flex;
+    margin: 20px    ;
+}
+.mxh .fb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #006acb;
+    color: white;
+    padding-right: 9px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.mxh .zl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 9px;
+    background: #0ecde8;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #fff;
+
+}
+
+/* item */
+.item{
+    padding-top: 20px;
+    
+}
+.itemso{
+    display: flex;
+    margin-bottom: 6px;
+}
+.itemso .icon{
+    margin-left: 20px;
+}
+.icon{
+    top: 2px;
+    
+}
+
+.itemso1{
+    flex: 1;
+    margin-left: 30px;
+}
+.itemso1 .aso{
+    color: red;
+    font-size: 14px;
+}
+.cuoitrang{
+    width: 1120px;
+    margin: auto;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cuoitrang .khochua{
+    width: 19%;
+    height: 99%;
+
+    
+}
+.cuoitrang .tem1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.khochua h2{
+    font-size: 18px;
+    color: #787878;
+}
+.item1 ul{
+    width: 100%;
+    height: auto;
+    font-size: 14px ;
+    list-style: none;
+    
+}
+.cuoitrang .tem1 h3{
+    font-size: 16px
+}
+.cuoitrang div ul li{
+    width: 100%;
+}
+.item2 ul{
+    margin-top: 20px;
+    margin-left: 15px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.khoi1 {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.khoiketnoi{
+    display: flex;
+    justify-content: space-between;
+    height: 32px;
+    width: 100%;
+}

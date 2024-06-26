@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="giohang.css">
+</head>
+
+<body>
+    <div class="menutong">
+        <div class="menucha">
+            <div class="menuchaanh"><img src="https://lapvip.vn/html-viettech/images/logo.png" alt=""></div>
+            <div class="menuchainput"><input type="text"><button
+                    style="background-color: rgb(50, 47, 47); color: aliceblue;">Tìm Kiếm</button></div>
+            <div class="menuchathanhphan">
+                <a href="">Góp ý khiến nại</a>
+                <a href="">Tin tức</a>
+                <a href="">Giỏ hàng</a>
+            </div>
+        </div>
+        <div class="menucon">
+            <ul>
+                <li>MACBOOK</li>
+                <li>SURFACE</li>
+                <li>LAPTOP MỚI</li>
+                <li>LAPTOP CŨ GIÁ RẺ</li>
+                <li>PHỤ KIỆN</li>
+                <li>KHUYẾN MÃI</li>
+            </ul>
+        </div>
+    </div>
+    <div style="width: 100%;" class="ab">
+        <div class="bb" style="width: 1200px; margin: 10px auto;padding-right: 35px;"><a href="">Trang chủ / Giỏ
+                hàng</a>
+        </div>
+        <div class="giohang">
+            <div><span style="font-size: 30px;">Giỏ hàng của bạn</span></div>
+            <hr style="border-style: 0.5px solid;width: 100%;margin:20px 0px">
+
+            <div class="thongtinnhieusanpham">
+                <!-- <div class="sanpham1">
+                    <div class="anh">
+                        <img id="anh1" src="" style="object-fit: cover;width: 100%;height: 100%;" alt="">
+                    </div>
+                    <div class="noidungsp">
+                        <span id="noidungsp1">Dell Precision 7770 Gen 12th Core i7-12850HX, RAM 64GB,
+                            SSD 1TB, A3000, FHD <br>
+                        </span>
+                        <button class="button" onclick="xoa(a)">xóa</button>
+                    </div>
+                    <div class="gia">
+                        Giá bán:
+                        <span id="gia">
+
+                        </span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+    <script>
+        
+        var storedProducts = localStorage.getItem('products');
+        var products = storedProducts ? JSON.parse(storedProducts) : [];
+        function upload() 
+        {
+            for (var i = 0; i < products.length; i++) {
+                var product = products[i];
+                var div3 = document.createElement('div');
+                div3.classList.add('sanpham1');
+                var div4 = document.createElement('div');
+                div4.classList.add('anh');
+                var img = document.createElement('img');
+                img.id = 'anh' + (i + 1);
+                img.src = product.pic;
+                img.style.objectFit = 'cover';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                div4.appendChild(img);
+                var div5 = document.createElement('div');
+                div5.classList.add('noidungsp');
+                var span2 = document.createElement('span');
+                span2.id = 'noidungsp' + (i + 1);
+                span2.textContent = product.name;
+                var button = document.createElement('button');
+                button.class = 'button';
+                button.id = 'button' + (i + 1);
+                button.textContent = 'xóa';
+                button.onclick = function () {
+                    var buttonIndex = parseInt(this.getAttribute('id').slice(6));// slice là cắt chuỗi button
+                    xoa(buttonIndex - 1);
+                }
+                div5.appendChild(span2);
+                var div6 = document.createElement('div');
+                div6.classList.add('gia');
+                div6.textContent = 'Giá bán: ';
+                var span3 = document.createElement('span');
+                var br = document.createElement('br');
+                span3.id = 'gia' + (i + 1);
+                span3.textContent = product.price;
+                div6.appendChild(span3);
+                div3.appendChild(div4);
+                div3.appendChild(div5);
+                div5.append(br);
+                div5.appendChild(button);
+                div3.appendChild(div6);
+                document.querySelector('.giohang .thongtinnhieusanpham').appendChild(div3);
+            }
+        }
+
+        function xoa(i) {
+            products.splice(i, 1);
+            localStorage.setItem('products', JSON.stringify(products));
+            console.log(i);
+            console.log(products);
+            var element = document.querySelector('.thongtinnhieusanpham');
+            // Sử dụng phương thức remove()
+            element.remove();
+            products = localStorage.getItem('products');
+            window.location.href="http://127.0.0.1:5500/giohang.html";
+        }
+        upload();
+
+    </script>
+
+</body>
+
+</html>

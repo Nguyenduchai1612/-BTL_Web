@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="dangky.css">
+<style>
+   
+</style>
+<body>
+    <div class="menutong">
+        <div class="menucha">
+          <div class="menuchaanh"><img src="https://lapvip.vn/html-viettech/images/logo.png" alt=""></div>
+          <div class="menuchainput"><input type="text"
+              placeholder="Nhập tên điện thoại, máy tính, phụ kiện...cần tìm"><button
+              style="background-color: rgb(50, 47, 47); color: aliceblue;">Tìm Kiếm</button></div>
+          <div class="menuchathanhphan">
+            <a href="">Đăng ký</a>
+            <a href="">Tin tức</a>
+            <a href="">Giỏ hàng</a>
+          </div>
+        </div>
+        <div class="menucon">
+          <ul>
+            <li>MACBOOK</li>
+            <li>SURFACE</li>
+            <li>LAPTOP MỚI</li>
+            <li>LAPTOP CŨ GIÁ RẺ</li>
+            <li>PHỤ KIỆN</li>
+            <li>KHUYẾN MÃI</li>
+          </ul>
+        </div>
+      </div>
+    <div class="form">
+        
+        <div class="toolbox">
+            ĐĂNG KÝ TÀI KHOẢN
+            <div style="width: 200px;">
+                <input placeholder="Tài khoản" id="taikhoan" style="margin-bottom: 15px;border-radius: 5px;border: 0px;" type="text"><br>
+                <input placeholder="Mật khẩu" id="matkhau" style="margin-bottom: 15px;border-radius: 5px;border: 0px;" type="password"><br>
+                <input placeholder="Nhập lại mật khẩu" id="maukhau" style="margin-bottom: 15px;border-radius: 5px;border: 0px;" type="password"><br>
+                <input type="checkbox" id="showPasswordCheckbox" onchange="togglePasswordVisibility()"><label for="showPasswordCheckbox">Hiển thị mật khẩu</label><br>
+                <button onclick="laytkmk()">Đăng Ký</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function togglePasswordVisibility() {
+            var matkhauInput = document.getElementById("matkhau");
+            var maukhauInput = document.getElementById("maukhau");
+            
+            if (matkhauInput.type === "password") {
+                matkhauInput.type = "text";
+                maukhauInput.type = "text";
+            } else {
+                matkhauInput.type = "password";
+                maukhauInput.type = "password";
+            }
+        }
+        function laytkmk() {
+            var TK= document.getElementById("taikhoan").value;
+            var MK=document.getElementById("matkhau").value;
+            localStorage.setItem("TaiKhoan",TK);
+            localStorage.setItem("MatKhau",MK);
+            window.location.href="http://127.0.0.1:5500/dangnhap.html";
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

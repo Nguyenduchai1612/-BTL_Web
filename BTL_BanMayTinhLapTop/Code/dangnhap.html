@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng Nhập-HYPER</title>
+</head>
+<link rel="stylesheet" href="dangnhap.css">
+
+<body>
+  <div class="menutong">
+    <div class="menucha">
+      <div class="menuchaanh"><img src="https://lapvip.vn/html-viettech/images/logo.png" alt=""></div>
+      <div class="menuchainput"><input type="text"
+          placeholder="Nhập tên điện thoại, máy tính, phụ kiện...cần tìm"><button
+          style="background-color: rgb(50, 47, 47); color: aliceblue;">Tìm Kiếm</button></div>
+      <div class="menuchathanhphan">
+        <a href="">Đăng ký</a>
+        <a href="">Tin tức</a>
+        <a href="">Giỏ hàng</a>
+      </div>
+    </div>
+    <div class="menucon">
+      <ul>
+        <li>MACBOOK</li>
+        <li>SURFACE</li>
+        <li>LAPTOP MỚI</li>
+        <li>LAPTOP CŨ GIÁ RẺ</li>
+        <li>PHỤ KIỆN</li>
+        <li>KHUYẾN MÃI</li>
+      </ul>
+    </div>
+  </div>
+  <div class="login-page">
+    <div class="form">
+      <h1 style="margin-bottom: 50px; margin-top: -20px;">Đăng Nhập</h1>
+      <input id="tk" type="text" placeholder="Tài khoản" />
+      <input id="mk" type="password" placeholder="Mật khẩu" />
+      <button id="loginBtn">Đăng Nhập</button>
+    </div>
+  </div>
+
+  <script>
+
+    const loginBtn = document.getElementById('loginBtn');
+
+
+    // Thêm sự kiện click vào nút
+    loginBtn.addEventListener('click', function () {
+      console.log(localStorage.getItem("TaiKhoan"));
+      // Chuyển hướng đến trang chủ
+      if (document.getElementById("tk").value === localStorage.getItem("TaiKhoan") & document.getElementById("mk").value === localStorage.getItem("MatKhau")) {
+        window.location.href = 'http://127.0.0.1:5500/TrangChu.html';
+        // Hiển thị thông báo
+        alert('Đăng nhập thành công!');
+      }
+    });
+    function tk() {
+      var a = localStorage.getItem("TaiKhoan");
+      console.log(a);
+    }
+  </script>
+</body>
+
+</html>
